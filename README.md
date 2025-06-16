@@ -108,10 +108,8 @@ Data columns (total 5 columns):
 dtypes: int64(4), object(1)
 memory usage: 7.9+ KB
 ```
-**Graph-1: The Elbow Method**
 ![Screenshot (109)](https://github.com/user-attachments/assets/9412405b-2bdc-4eca-9850-961dcf7ee149)
 
-**Graph-2: Customer Segments**
 ![Screenshot (110)](https://github.com/user-attachments/assets/91fc532b-1a0d-494a-bca9-0b09ae901b81)
 
 

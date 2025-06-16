@@ -35,23 +35,20 @@ df.columns
 ```
 
 **3. Feature Selection**
-
-Selected two key numerical features for clustering:
+- Selected two key numerical features for clustering:
 ```
 X = df[['Annual Income (k$)', 'Spending Score (1-100)']]
 ```
 
 **4. Feature Scaling**
-
-Scaled the features for better clustering performance using **StandardScaler**:
+- Scaled the features for better clustering performance using **StandardScaler**:
 ```
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 ```
 
 **5. Finding Optimal Clusters – Elbow Method**
-
-The **elbow method** is used to determine the optimal number of clusters **(k)**:
+- The **elbow method** is used to determine the optimal number of clusters **(k)**:
 ```
 wcss = []
 for i in range(1,11):
@@ -59,7 +56,6 @@ for i in range(1,11):
   kmeans.fit(X_scaled)
   wcss.append(kmeans.inertia_)
 ```
-
 Visualized using:
 ```
 plt.plot(range(1,11), wcss, marker='o')
@@ -67,8 +63,7 @@ plt.plot(range(1,11), wcss, marker='o')
 - The **"elbow"** point (where the WCSS(Within-Cluster Sum of Squares) drop starts to level off) indicates the best k.
 
 **6. Applying K-Means Clustering**
-
-After determining **k=5**, we fit the model:
+- After determining **k=5**, we fit the model:
 ```
 kmeans = KMeans(n_clusters=5, init='k-means++', random_state=42)
 y_kmeans = kmeans.fit_predict(X_scaled)

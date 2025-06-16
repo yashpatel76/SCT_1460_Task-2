@@ -1,6 +1,8 @@
 **🛍️ Mall Customer Segmentation using K-Means Clustering**
+
 This project applies **K-Means Clustering**, an unsupervised machine learning algorithm, to segment customers based on their **Annual Income** and **Spending Score** using the **Mall Customers dataset**.
 It helps in identifying customer groups for targeted marketing strategies and better business decision-making.
+
 
 **📁 Dataset Overview**
 - **Filename:** Mall_Customers.csv
@@ -9,12 +11,16 @@ It helps in identifying customer groups for targeted marketing strategies and be
   - Annual Income (k$)
   - Spending Score (1-100)
 
+
 **📌 Problem Statement**
 
 The goal is to group customers into **distinct segments** based on their **purchasing behavior** using **K-Means clustering**, and visualize the resulting clusters to understand different customer types (e.g., high-income low-spenders, low-income high-spenders, etc.).
 
+
 **🚀 How It Works**
+
 **1. Importing Libraries**
+
 Used libraries include:
 - pandas, numpy for data handling
 - matplotlib, seaborn for visualization
@@ -24,7 +30,6 @@ Used libraries include:
 ```
 df = pd.read_csv('/content/sample_data/Mall_Customers.csv')
 ```
-
 Basic dataset inspection using:
 ```
 df.head()
@@ -59,7 +64,7 @@ Visualized using:
 ```
 plt.plot(range(1,11), wcss, marker='o')
 ```
-📌 The **"elbow"** point (where the WCSS(Within-Cluster Sum of Squares) drop starts to level off) indicates the best k.
+- The **"elbow"** point (where the WCSS(Within-Cluster Sum of Squares) drop starts to level off) indicates the best k.
 
 **6. Applying K-Means Clustering**
 After determining **k=5**, we fit the model:
@@ -67,7 +72,7 @@ After determining **k=5**, we fit the model:
 kmeans = KMeans(n_clusters=5, init='k-means++', random_state=42)
 y_kmeans = kmeans.fit_predict(X_scaled)
 ```
-Cluster labels are then added to the original DataFrame.
+- Cluster labels are then added to the original DataFrame.
 
 
 **📊 Visualization of Clusters**
@@ -88,12 +93,33 @@ scikit-learn
 ```
 
 You can install them using:
-
 ```
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
+
 **📈 Sample Output (Cluster Plot)**
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 200 entries, 0 to 199
+Data columns (total 5 columns):
+```
+ #   Column                  Non-Null Count  Dtype 
+---  ------                  --------------  ----- 
+ 0   CustomerID              200 non-null    int64 
+ 1   Gender                  200 non-null    object
+ 2   Age                     200 non-null    int64 
+ 3   Annual Income (k$)      200 non-null    int64 
+ 4   Spending Score (1-100)  200 non-null    int64 
+```
+dtypes: int64(4), object(1)
+memory usage: 7.9+ KB
+
+
+**Graph-1: The Elbow Method**
+
+**Graph-2: Customer Segments**
+
 
 **📚 Learnings**
 - Hands-on implementation of K-Means clustering
@@ -106,6 +132,8 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 - Try other clustering algorithms (DBSCAN, Hierarchical)
 - Build an interactive dashboard using Plotly or Streamlit
 
+
 **👨‍💻 Author**
 **Yash Patel**
+
 Python Enthusiast | Machine Learning Explorer | Aspiring Data Scientist

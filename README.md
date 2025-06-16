@@ -3,7 +3,6 @@
 This project applies **K-Means Clustering**, an unsupervised machine learning algorithm, to segment customers based on their **Annual Income** and **Spending Score** using the **Mall Customers dataset**.
 It helps in identifying customer groups for targeted marketing strategies and better business decision-making.
 
-
 **📁 Dataset Overview**
 - **Filename:** Mall_Customers.csv
 - **Source:** Kaggle
@@ -11,11 +10,9 @@ It helps in identifying customer groups for targeted marketing strategies and be
   - Annual Income (k$)
   - Spending Score (1-100)
 
-
 **📌 Problem Statement**
 
 The goal is to group customers into **distinct segments** based on their **purchasing behavior** using **K-Means clustering**, and visualize the resulting clusters to understand different customer types (e.g., high-income low-spenders, low-income high-spenders, etc.).
-
 
 **🚀 How It Works**
 
@@ -38,12 +35,14 @@ df.columns
 ```
 
 **3. Feature Selection**
+
 Selected two key numerical features for clustering:
 ```
 X = df[['Annual Income (k$)', 'Spending Score (1-100)']]
 ```
 
 **4. Feature Scaling**
+
 Scaled the features for better clustering performance using **StandardScaler**:
 ```
 scaler = StandardScaler()
@@ -51,6 +50,7 @@ X_scaled = scaler.fit_transform(X)
 ```
 
 **5. Finding Optimal Clusters – Elbow Method**
+
 The **elbow method** is used to determine the optimal number of clusters **(k)**:
 ```
 wcss = []
@@ -67,6 +67,7 @@ plt.plot(range(1,11), wcss, marker='o')
 - The **"elbow"** point (where the WCSS(Within-Cluster Sum of Squares) drop starts to level off) indicates the best k.
 
 **6. Applying K-Means Clustering**
+
 After determining **k=5**, we fit the model:
 ```
 kmeans = KMeans(n_clusters=5, init='k-means++', random_state=42)
@@ -74,12 +75,10 @@ y_kmeans = kmeans.fit_predict(X_scaled)
 ```
 - Cluster labels are then added to the original DataFrame.
 
-
 **📊 Visualization of Clusters**
 - Each cluster is plotted in a different color.
 - Centroids are shown using yellow ‘X’ markers.
 - Original (unscaled) values are used for a more intuitive chart.
-
 
 **Resulting plot:** Customer Segments based on **Annual Income vs. Spending Score**.
 
@@ -96,7 +95,6 @@ You can install them using:
 ```
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
-
 
 **📈 Sample Output (Cluster Plot)**
 
@@ -115,11 +113,9 @@ Data columns (total 5 columns):
 dtypes: int64(4), object(1)
 memory usage: 7.9+ KB
 
-
 **Graph-1: The Elbow Method**
 
 **Graph-2: Customer Segments**
-
 
 **📚 Learnings**
 - Hands-on implementation of K-Means clustering
@@ -134,6 +130,7 @@ memory usage: 7.9+ KB
 
 
 **👨‍💻 Author**
+
 **Yash Patel**
 
 Python Enthusiast | Machine Learning Explorer | Aspiring Data Scientist

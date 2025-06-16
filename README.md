@@ -92,11 +92,11 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
 **📈 Sample Output (Cluster Plot)**
-
+```
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 200 entries, 0 to 199
 Data columns (total 5 columns):
-```
+
  #   Column                  Non-Null Count  Dtype 
 ---  ------                  --------------  ----- 
  0   CustomerID              200 non-null    int64 
@@ -104,10 +104,10 @@ Data columns (total 5 columns):
  2   Age                     200 non-null    int64 
  3   Annual Income (k$)      200 non-null    int64 
  4   Spending Score (1-100)  200 non-null    int64 
-```
+
 dtypes: int64(4), object(1)
 memory usage: 7.9+ KB
-
+```
 **Graph-1: The Elbow Method**
 
 **Graph-2: Customer Segments**

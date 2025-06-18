@@ -77,13 +77,11 @@ y_kmeans = kmeans.fit_predict(X_scaled)
 **Resulting plot:** Customer Segments based on **Annual Income vs. Spending Score**.
 
 **📎 Requirements**
-```
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-```
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
 
 You can install them using:
 ```

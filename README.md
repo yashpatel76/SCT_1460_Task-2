@@ -73,7 +73,6 @@ y_kmeans = kmeans.fit_predict(X_scaled)
 **📊 Visualization of Clusters**
 - Each cluster is plotted in a different color.
 - Centroids are shown using yellow ‘X’ markers.
-- Original (unscaled) values are used for a more intuitive chart.
 
 **Resulting plot:** Customer Segments based on **Annual Income vs. Spending Score**.
 

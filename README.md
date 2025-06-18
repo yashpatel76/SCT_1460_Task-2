@@ -112,7 +112,6 @@ memory usage: 7.9+ KB
 
 ![Screenshot (110)](https://github.com/user-attachments/assets/91fc532b-1a0d-494a-bca9-0b09ae901b81)
 
-
 **📚 Learnings**
 - Hands-on implementation of K-Means clustering
 - Understanding and using the elbow method
@@ -123,7 +122,6 @@ memory usage: 7.9+ KB
 - Include more features like Age, Gender
 - Try other clustering algorithms (DBSCAN, Hierarchical)
 - Build an interactive dashboard using Plotly or Streamlit
-
 
 **👨‍💻 Author**
 

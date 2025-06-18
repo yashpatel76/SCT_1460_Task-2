@@ -118,7 +118,6 @@ memory usage: 7.9+ KB
 **🧠 Future Improvements**
 - Include more features like Age, Gender
 - Try other clustering algorithms (DBSCAN, Hierarchical)
-- Build an interactive dashboard using Plotly or Streamlit
 
 **👨‍💻 Author**
 
